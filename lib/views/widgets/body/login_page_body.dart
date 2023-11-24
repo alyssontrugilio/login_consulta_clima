@@ -1,3 +1,5 @@
+import 'package:desafio_layout/views/widgets/texts/text_email.dart';
+import 'package:desafio_layout/views/widgets/texts/text_password.dart';
 import 'package:flutter/material.dart';
 
 import '../buttons/button_widgets.dart';
@@ -8,28 +10,37 @@ class BodyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: [
-        Padding(
-          padding: EdgeInsets.only(top: 30),
-          child: LogoApp(),
-        ),
-        Padding(
-          padding: EdgeInsets.only(top: 45),
-          child: Text(
-            "Consultar Clima",
-            style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+    return const SingleChildScrollView(
+      child: Column(
+        children: [
+          SizedBox(
+            child: LogoApp(),
           ),
-        ),
-        Text(
-          'Plugin app for my',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-        ),
-        Padding(
-          padding: EdgeInsets.only(top: 40),
-          child: ButtonLogin(),
-        )
-      ],
+          Padding(
+            padding: EdgeInsets.only(top: 45),
+            child: Text(
+              "Consultar Clima",
+              style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Text(
+            'Plugin app for my',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 10),
+            child: TextEmail(),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 10),
+            child: TextPassword(),
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 40),
+            child: ButtonLogin(),
+          )
+        ],
+      ),
     );
   }
 }

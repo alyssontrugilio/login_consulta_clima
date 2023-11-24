@@ -14,11 +14,14 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Stack(
-        alignment: Alignment.center,
         children: [
           BackgroundImage(),
           Padding(
-            padding: EdgeInsets.only(top: 50),
+            padding: EdgeInsets.only(
+              top: 30,
+              left: 15,
+              right: 15,
+            ),
             child: BodyWidget(),
           ),
         ],
